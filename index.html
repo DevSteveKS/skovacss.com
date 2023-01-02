@@ -1,0 +1,80 @@
+<html><head>
+	<!-- Mobile Specifics -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="HandheldFriendly" content="true">
+	<meta name="MobileOptimized" content="320">
+  <title>SKOVACSS.COM</title>
+  <link rel="shortcut icon" type="image/png" href="favicon.png">
+  <style>
+    html { 
+      background: url(bkg.jpg) no-repeat center center fixed; 
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+    #thegoogle{width:650px;height:50px;border:0px;font-size:1.7em;border-radius:50px; padding-left:15px;color:#eee;background:#222;opacity:50%;opacity:0.5;}
+    #thegoogle2{border:1px solid #222;border-radius:50px;}
+    #content{width:650px;margin:150px auto 0px;border:0px solid #000;text-align:center;}  
+
+    #date{text-align:center;color:#fff;font-size:2em;margin:0px auto 50px;font-family: 'Open Sans'; width:200px;/*background:#343434;*/border-radius:5px;padding-top:10px;padding-bottom:10px;opacity:0.7;}
+
+    #hide{display:none;}
+    input:focus,
+    select:focus,
+    textarea:focus,
+    button:focus {
+        outline: none;
+    }
+    #icons{border:0px solid #fff;margin:10px auto;width:600px;}
+    #icons img {width:20px;opacity:70%;}
+    #icons-left{float:left;}
+    #icons-right{float:right;}
+
+    @media only screen and (max-width: 400px) {
+      #thegoogle{width:380px;height:50px;border:0px;font-size:1.7em; padding-left:5px;color:#ddd;background:transparent;/*opacity:50%;opacity:0.5;*/}
+      #content{width:400px;margin:40px auto 0px;border:0px solid #000;text-align:center;}  
+      
+      #content img {width:40px; height:auto;margin-right:10px;margin-left:10px;text-align:center;margin-bottom:20px;}
+    #icons{width:400px;}
+    }
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com"> 
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""> 
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&amp;display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div id="content">
+
+    <div id="date">
+    <script>
+      var today = new Date();
+      var dd = String(today.getDate()).padStart(2, '0');
+      var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+      var yyyy = today.getFullYear();
+
+      today = mm + '/' + dd + '/' + yyyy;
+      document.write(today);
+    </script>
+    </div>
+    
+  <form id="thegoogle2" method="get" action="https://search.brave.com/search?q=">
+  <input id="thegoogle" autofocus="" type="text" name="q" size="31" maxlength="255" value="">
+  <input id="hide" type="submit" checked="" value="Brave Search">
+  </form>
+
+  </div>
+
+  <div id="icons">
+    <div id="icons-left">
+    <a target="_blank" href="https://mail.proton.me/u/2/inbox"><img style="margin-right:25px;" src="email.png"></a>
+    <a target="_blank" href="https://calendar.proton.me/u/2/"><img style="margin-right:25px;" src="calendar.png"></a>
+    </div>
+    
+    <div id="icons-right">
+    <a target="_blank" href="https://app.plex.tv/desktop/#!/"><img src="plex.png"></a> 
+    </div>
+    <div style="clear:both;"></div>
+  </div>
+</body>
